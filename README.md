@@ -52,9 +52,9 @@ By default, the script uses the following names and specs (all tunable via envir
 
 | VM Name            | CPUs | RAM   | Disk  | Ubuntu Release |
 |--------------------|:----:|:-----:|:-----:|:---------------|
-| `k8s-master-NEW`   | 4    | 8 GB  | 20 GB | 22.04 LTS      |
-| `k8s-worker1-NEW`  | 2    | 4 GB  | 10 GB | 22.04 LTS      |
-| `k8s-worker2-NEW`  | 2    | 4 GB  | 10 GB | 22.04 LTS      |
+| `k8s-master`   | 4    | 8 GB  | 20 GB | 22.04 LTS      |
+| `k8s-worker1`  | 2    | 4 GB  | 10 GB | 22.04 LTS      |
+| `k8s-worker2`  | 2    | 4 GB  | 10 GB | 22.04 LTS      |
 
 Modify these at the top of `install-k8s.sh` if you prefer different names or resources.
 
@@ -124,7 +124,7 @@ All nodes should be **Ready** and Calico/Tigera pods **Running**.
 - **Remove only this cluster’s VMs** (named in the script):
 
   ```bash
-  multipass delete k8s-master-NEW k8s-worker1-NEW k8s-worker2-NEW
+  multipass delete k8s-master k8s-worker1 k8s-worker2
   multipass purge
   ```
 
