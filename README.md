@@ -131,6 +131,7 @@ All nodes should be **Ready** and Calico/Tigera pods **Running**.
 - **Remove all Multipass VMs** (if you want a fully clean slate):
 
   ```bash
+  multipass stop --all
   multipass delete --all
   multipass purge
   ```
