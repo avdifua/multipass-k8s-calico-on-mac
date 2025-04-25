@@ -124,6 +124,7 @@ All nodes should be **Ready** and Calico/Tigera pods **Running**.
 - **Remove only this cluster’s VMs** (named in the script):
 
   ```bash
+  multipass stop k8s-master k8s-worker1 k8s-worker2
   multipass delete k8s-master k8s-worker1 k8s-worker2
   multipass purge
   ```
